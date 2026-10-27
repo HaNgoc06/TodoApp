@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>To do app </title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <main class="wrap">
+      <header>
+        <div>
+          <p class="eyebrow">C • Client–Server • SQLite</p>
+          <h1>Quản lý công việc</h1>
+          <p class="muted" id="version">Đang kết nối...</p>
+        </div>
+        <span class="pill" id="count">0 công việc</span>
+      </header>
+      <form id="new-task">
+        <input
+          id="title"
+          maxlength="200"
+          placeholder="Nhập công việc mới..."
+          required
+          aria-label="Tên công việc"
+        /><button type="submit">+ Thêm công việc</button>
+      </form>
+      <p id="error" role="alert"></p>
+      <div id="board" class="board">
+        <section class="lane">
+          <h2>Chưa hoàn thành <span id="todo-count">0</span></h2>
+          <div id="todo" class="items"></div>
+        </section>
+        <section class="lane done">
+          <h2>Hoàn thành <span id="done-count">0</span></h2>
+          <div id="done" class="items"></div>
+        </section>
+      </div>
+    </main>
+    <script src="/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,168 @@
+:root {
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    sans-serif;
+  color: #20293a;
+  background: #f4f6fb;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+.wrap {
+  max-width: 1050px;
+  margin: 55px auto;
+  padding: 0 22px;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+h1 {
+  font-size: 2rem;
+  margin: 4px 0;
+}
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  color: #5169b4;
+}
+.muted,
+footer {
+  color: #64748b;
+}
+footer {
+  margin: 28px 0;
+  font-size: 0.8rem;
+}
+.pill {
+  border-radius: 99px;
+  background: #e0e7ff;
+  padding: 9px 16px;
+  color: #3730a3;
+  white-space: nowrap;
+}
+form {
+  display: flex;
+  gap: 12px;
+  margin: 30px 0 12px;
+}
+input {
+  padding: 14px 16px;
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #d1d8e5;
+  border-radius: 12px;
+  font: inherit;
+}
+button {
+  font: inherit;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+  background: #4f46e5;
+  color: white;
+  padding: 12px 18px;
+}
+button:hover {
+  filter: brightness(0.92);
+}
+#error {
+  color: #b91c1c;
+  min-height: 1.4em;
+}
+.board {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.lane {
+  background: #e8edf6;
+  border-radius: 16px;
+  padding: 18px;
+  min-height: 310px;
+}
+.lane.done {
+  background: #e6f3eb;
+}
+h2 {
+  font-size: 1.05rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h2 span {
+  font-size: 0.8rem;
+  color: #64748b;
+}
+.items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px;
+  background: white;
+  border: 1px solid #e1e5ed;
+  border-radius: 12px;
+  box-shadow: 0 2px 7px #00000008;
+}
+.task .name {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+.task input {
+  flex: 0 0 auto;
+  accent-color: #4f46e5;
+  width: 18px;
+  height: 18px;
+}
+.task .delete {
+  padding: 5px 9px;
+  background: #fee2e2;
+  color: #b91c1c;
+}
+.empty {
+  color: #64748b;
+  font-size: 0.9rem;
+  padding: 10px 0;
+}
+.list-mode {
+  display: block;
+}
+.list-mode .lane {
+  background: transparent;
+  padding: 0;
+  min-height: 0;
+}
+.list-mode .lane.done {
+  display: none;
+}
+.list-mode .items {
+  max-width: 750px;
+}
+@media (max-width: 650px) {
+  .wrap {
+    margin: 24px auto;
+  }
+  .board {
+    grid-template-columns: 1fr;
+  }
+  form {
+    flex-direction: column;
+  }
+  header {
+    align-items: start;
+    flex-direction: column;
+  }
+}
